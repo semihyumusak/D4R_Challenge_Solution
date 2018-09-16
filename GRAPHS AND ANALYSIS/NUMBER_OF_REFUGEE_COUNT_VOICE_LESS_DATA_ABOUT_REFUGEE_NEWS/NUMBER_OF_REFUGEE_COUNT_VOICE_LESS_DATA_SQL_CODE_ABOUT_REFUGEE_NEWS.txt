@@ -1,0 +1,8 @@
+SELECT        TOP (100) PERCENT COUNT(dbo.[Dataset 1_Voice_RAW].REFUGEE_CALL_DURATION) AS adet, dbo.[Dataset 1_Voice_RAW].date, dbo.Table_antep_trabzon_sakarya_events.event
+                          FROM            dbo.Base_Station_Location INNER JOIN
+                                                    dbo.[Dataset 1_Voice_RAW] ON dbo.Base_Station_Location.BTS_ID = dbo.[Dataset 1_Voice_RAW].OUTGOING_SITE_ID FULL OUTER JOIN
+                                                    dbo.Table_antep_trabzon_sakarya_events ON dbo.Base_Station_Location.MX_SAHAIL = dbo.Table_antep_trabzon_sakarya_events.city AND 
+                                                    dbo.[Dataset 1_Voice_RAW].date = dbo.Table_antep_trabzon_sakarya_events.date
+                          GROUP BY dbo.[Dataset 1_Voice_RAW].date, dbo.Base_Station_Location.MX_SAHAIL, dbo.Table_antep_trabzon_sakarya_events.event
+                          HAVING         (dbo.Base_Station_Location.MX_SAHAIL = 'TRABZON')
+                          ORDER BY dbo.[Dataset 1_Voice_RAW].date

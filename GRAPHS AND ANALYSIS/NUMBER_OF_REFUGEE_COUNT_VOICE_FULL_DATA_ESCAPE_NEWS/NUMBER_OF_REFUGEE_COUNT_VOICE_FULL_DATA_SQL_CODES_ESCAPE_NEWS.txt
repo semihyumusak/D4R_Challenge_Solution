@@ -1,0 +1,11 @@
+SELECT        TOP (100) PERCENT derivedtbl_1.adet, derivedtbl_1.event, dbo.table_gunler.tarih
+FROM            (SELECT        TOP (100) PERCENT COUNT(dbo.[Dataset 1_Voice_RAW].REFUGEE_CALL_DURATION) AS adet, dbo.Events.event, dbo.[Dataset 1_Voice_RAW].date
+                          FROM            dbo.Base_Station_Location INNER JOIN
+                                                    dbo.[Dataset 1_Voice_RAW] ON dbo.Base_Station_Location.BTS_ID = dbo.[Dataset 1_Voice_RAW].OUTGOING_SITE_ID FULL OUTER JOIN
+                                                    dbo.Events ON dbo.[Dataset 1_Voice_RAW].date = dbo.Events.date AND dbo.Base_Station_Location.MX_SAHAIL = dbo.Events.city AND 
+                                                    dbo.Base_Station_Location.MX_SILCE = dbo.Events.district
+                          GROUP BY dbo.[Dataset 1_Voice_RAW].date, dbo.Base_Station_Location.MX_SAHAIL, dbo.Base_Station_Location.MX_SILCE, dbo.Events.event
+                          HAVING         (dbo.Base_Station_Location.MX_SAHAIL = 'MUGLA') AND (dbo.Base_Station_Location.MX_SILCE = 'BODRUM')
+                          ORDER BY dbo.[Dataset 1_Voice_RAW].date) AS derivedtbl_1 FULL OUTER JOIN
+                         dbo.table_gunler ON derivedtbl_1.date = dbo.table_gunler.tarih
+ORDER BY dbo.table_gunler.tarih

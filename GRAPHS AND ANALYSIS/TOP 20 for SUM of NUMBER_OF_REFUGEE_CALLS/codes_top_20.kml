@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.1">
+<!-- Data derived from:
+       Ed Knittel - || tastypopsicle.com
+       Feel free to use this file for your own purposes.
+       Just leave the comments and credits when doing so.
+-->
+  <Document>
+    <name>Refu_Call</name>
+    <description>lines</description>
+
+
+    <Style id="redLine">
+      <LineStyle>
+        <color>#09e0ff</color>
+        <width>4</width>
+      </LineStyle>
+    </Style>
+
+
+
+	<Placemark> 
+		<LineString>
+		<coordinates>
+		<!-- ISTANBUL TO TRABZON -->
+			39.451500,40.585200
+			28.375200,41.011200
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#000000</color>
+			<width>21</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+
+	
+	
+	<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- TRABZON TO ISTANBUL -->
+			28.375200,41.011200
+			39.451500,40.585200
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#360808</color>
+			<width>20</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+	<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- KAHRAMANMARAS TO GAZIANTEP -->
+			36.492800,37.351300
+			36.373331,36.593498
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#420f0f</color>
+			<width>19</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>		
+		
+	<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- KOCAELI TO SANLIURFA -->
+			29.253414,40.482155
+			38.565240,36.424720
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#671414</color>
+			<width>18</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>		
+	
+		
+	<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- BALIKESIR TO IZMIR -->
+			27.002740,39.355460
+			26.551978,38.410517
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#7a1a1a</color>
+			<width>17</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+
+		<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- ADANA TO KONYA -->
+			32.291856,38.162813
+			35.165524,36.594153
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#921f1f</color>
+			<width>16</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- OSMANIYE TO ISTANBUL -->
+			36.274954,37.145701
+			28.531392,41.003816
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#a32323</color>
+			<width>15</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- OSMANIYE TO ISTANBUL -->
+			36.274954,37.145701
+			28.404636,41.001395
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#b82424</color>
+			<width>14</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- VAN TO GAZIANTEP -->
+			43.205809,39.023050
+			37.213060,37.031274
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#c72a2a</color>
+			<width>13</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- ISTANBUL TO GAZIANTEP -->
+			28.571849,41.003514
+			37.262537,37.043968
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#d62f2f</color>
+			<width>12</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- KILIS TO ISTANBUL -->
+			37.131171,36.431207
+			28.563228,41.011374
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#e53333</color>
+			<width>11</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- ISMANIYE TO GAZIANTEP -->
+			36.120698,37.081493
+			36.373331,36.593498
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#33e5c6</color>
+			<width>10</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- ISTANBUL TO GAZIANTEP -->
+			28.571849,41.003514
+			37.262537,37.043968
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#c0e533</color>
+			<width>9</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- KOCAELI TO SANLIURFA -->
+			29.253414,40.482155
+			38.565240,36.424720
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#33e551</color>
+			<width>8</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- GAZIANTEP TO ICEL -->
+			37.231525,37.025140
+			34.322030,36.445480
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#3390e5</color>
+			<width>7</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- KOCAELI TO BURSA -->
+			29.533177,40.460852
+			28.573200,40.131186
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#77a3cc</color>
+			<width>6</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- ISTANBUL TO KILIS -->
+			28.563228,41.011374
+			37.131171,36.431207
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#702e96</color>
+			<width>5</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- OSMANIYE TO SAMSUN -->
+			36.274954,37.145701
+			36.045855,41.294477
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#526c7c</color>
+			<width>4</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- ISTANBUL TO GAZIANTEP -->
+			28.565556,41.005792
+			37.220750,37.041560
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#00ff04</color>
+			<width>3</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+	
+			<Placemark> 
+		<LineString>
+		<coordinates>
+		
+		<!-- TRABZON TO ISTANBOL -->
+			39.451570,40.585060
+			28.375200,41.011200
+
+
+		</coordinates>
+		</LineString>
+			<Style> 
+		<LineStyle>  
+			<color>#ffffff</color>
+			<width>2</width>
+		</LineStyle> 
+			</Style>
+	</Placemark>
+
+ 
+
+
+
+
+  </Document>
+</kml>

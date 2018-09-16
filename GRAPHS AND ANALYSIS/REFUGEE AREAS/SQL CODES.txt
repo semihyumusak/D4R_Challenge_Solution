@@ -1,0 +1,21 @@
+SELECT        TOP (100) PERCENT AVG((100 * dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami.Expr1) 
+                         / (dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami.Expr1 + dbo.View_AyniBazIstasyonunda4tenAzGundeKaydiBulunanlarToplami.Expr1)) AS yuzde, 
+                         SUM(dbo.View_AyniBazIstasyonunda4tenAzGundeKaydiBulunanlarToplami.Expr1) AS [4tenAzToplam], SUM(dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami.Expr1) AS [4tenFazlaToplam],
+                          dbo.Base_Station_Location.MX_SAHAIL, dbo.Base_Station_Location.MX_SILCE, 
+                         + '{"type":"Feature","properties":{"mag":' + SUBSTRING(CAST(View_AyniBazIstasyonunda4tenAzFazlaGundeKaydiBulunanlarYuzdesiFINAL_1.yuzde AS varchar(20)), 1, 1) 
+                         + '.' + SUBSTRING(CAST(View_AyniBazIstasyonunda4tenAzFazlaGundeKaydiBulunanlarYuzdesiFINAL_1.yuzde AS varchar(20)), 1, 1) 
+                         + ',"theTitle":"' + dbo.Base_Station_Location.MX_SAHAIL + '", "infos":"' + dbo.Base_Station_Location.MX_SILCE + '"},"geometry":{"type":"Point","coordinates":[' + dbo.View_Base_station_konumlarý_SON_Ters_koordine.Expr1
+                          + ']},"id":"' + CAST(dbo.Base_Station_Location.BTS_ID AS varchar(20)) + '"},' AS Expr1, dbo.Base_Station_Location.BTS_ID AS dene, dbo.View_Base_station_konumlarý_SON_Ters_koordine.Expr1 AS Expr2, 
+                         View_AyniBazIstasyonunda4tenAzFazlaGundeKaydiBulunanlarYuzdesiFINAL_1.yuzde AS Expr3
+FROM            dbo.View_AyniBazIstasyonunda4tenAzGundeKaydiBulunanlarToplami INNER JOIN
+                         dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami ON 
+                         dbo.View_AyniBazIstasyonunda4tenAzGundeKaydiBulunanlarToplami.SITE_ID = dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami.SITE_ID INNER JOIN
+                         dbo.Base_Station_Location ON dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami.SITE_ID = dbo.Base_Station_Location.BTS_ID INNER JOIN
+                         dbo.View_Base_station_konumlarý_SON_Ters_koordine ON dbo.Base_Station_Location.BTS_ID = dbo.View_Base_station_konumlarý_SON_Ters_koordine.BTS_ID INNER JOIN
+                         dbo.View_AyniBazIstasyonunda4tenAzFazlaGundeKaydiBulunanlarYuzdesiFINAL AS View_AyniBazIstasyonunda4tenAzFazlaGundeKaydiBulunanlarYuzdesiFINAL_1 ON 
+                         dbo.Base_Station_Location.BTS_ID = View_AyniBazIstasyonunda4tenAzFazlaGundeKaydiBulunanlarYuzdesiFINAL_1.bts_ID
+GROUP BY dbo.Base_Station_Location.MX_SAHAIL, dbo.Base_Station_Location.MX_SILCE, dbo.Base_Station_Location.BTS_ID, dbo.View_Base_station_konumlarý_SON_Ters_koordine.Expr1, 
+                         View_AyniBazIstasyonunda4tenAzFazlaGundeKaydiBulunanlarYuzdesiFINAL_1.yuzde
+HAVING        (AVG((100 * dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami.Expr1) 
+                         / (dbo.View_AyniBazIstasyonunda4tenFazlaGundeKaydiBulunanlarToplami.Expr1 + dbo.View_AyniBazIstasyonunda4tenAzGundeKaydiBulunanlarToplami.Expr1)) > 60)
+ORDER BY yuzde

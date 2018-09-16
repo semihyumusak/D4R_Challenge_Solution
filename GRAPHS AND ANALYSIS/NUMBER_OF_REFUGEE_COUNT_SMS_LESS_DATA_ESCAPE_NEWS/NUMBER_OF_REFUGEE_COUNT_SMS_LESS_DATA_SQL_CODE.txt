@@ -1,0 +1,6 @@
+SELECT        TOP (100) PERCENT dbo.Events.event, COUNT(dbo.[Dataset 1_SMS_RAW].NUMBER_OF_REFUGEE_SMS) AS adet, dbo.[Dataset 1_SMS_RAW].date AS tarih
+FROM            dbo.[Dataset 1_SMS_RAW] INNER JOIN
+                         dbo.Base_Station_Location ON dbo.[Dataset 1_SMS_RAW].OUTGOING_SITE_ID = dbo.Base_Station_Location.BTS_ID FULL OUTER JOIN
+                         dbo.Events ON dbo.[Dataset 1_SMS_RAW].date = dbo.Events.date AND dbo.Base_Station_Location.MX_SAHAIL = dbo.Events.city AND dbo.Base_Station_Location.MX_SILCE = dbo.Events.district
+GROUP BY dbo.Base_Station_Location.MX_SAHAIL, dbo.Base_Station_Location.MX_SILCE, dbo.Events.event, dbo.[Dataset 1_SMS_RAW].date
+HAVING        (dbo.Base_Station_Location.MX_SAHAIL = 'MUGLA') AND (dbo.Base_Station_Location.MX_SILCE = 'BODRUM')

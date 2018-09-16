@@ -1,0 +1,10 @@
+SELECT        TOP (100) PERCENT derivedtbl_1.adet, derivedtbl_1.event, dbo.table_gunler.tarih
+FROM            (SELECT        TOP (100) PERCENT dbo.Table_antep_trabzon_sakarya_events.event, dbo.[Dataset 1_SMS_RAW].date, COUNT(dbo.[Dataset 1_SMS_RAW].NUMBER_OF_REFUGEE_SMS) AS adet
+                          FROM            dbo.[Dataset 1_SMS_RAW] INNER JOIN
+                                                    dbo.Base_Station_Location ON dbo.[Dataset 1_SMS_RAW].OUTGOING_SITE_ID = dbo.Base_Station_Location.BTS_ID FULL OUTER JOIN
+                                                    dbo.Table_antep_trabzon_sakarya_events ON dbo.[Dataset 1_SMS_RAW].date = dbo.Table_antep_trabzon_sakarya_events.date AND 
+                                                    dbo.Base_Station_Location.MX_SAHAIL = dbo.Table_antep_trabzon_sakarya_events.city
+                          GROUP BY dbo.Base_Station_Location.MX_SAHAIL, dbo.Table_antep_trabzon_sakarya_events.event, dbo.[Dataset 1_SMS_RAW].date
+                          HAVING         (dbo.Base_Station_Location.MX_SAHAIL = 'TRABZON')) AS derivedtbl_1 FULL OUTER JOIN
+                         dbo.table_gunler ON derivedtbl_1.date = dbo.table_gunler.tarih
+ORDER BY dbo.table_gunler.tarih
